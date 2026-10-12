@@ -1,0 +1,50 @@
+plugins {
+    id "com.android.application"
+}
+
+def releaseKeystore = file("../release.keystore")
+
+android {
+    namespace "com.yg.dsbalance"
+    compileSdk 36
+    buildToolsVersion "36.1.0"
+
+    defaultConfig {
+        applicationId "com.yg.dsbalance"
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+
+    if (releaseKeystore.exists()) {
+        signingConfigs {
+            release {
+                storeFile releaseKeystore
+                storePassword "dsbalance123"
+                keyAlias "dsbalance"
+                keyPassword "dsbalance123"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (releaseKeystore.exists()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        encoding "UTF-8"
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeepSeek 余额</string>
+    <string name="welcome_title">欢迎使用余额通知</string>
+    <string name="welcome_desc">本应用会在通知栏常驻显示你的 DeepSeek API 余额，默认每 5 分钟自动刷新一次，也可以随时手动刷新。</string>
+    <string name="perm_title">需要授予以下权限</string>
+    <string name="perm_notif">① 通知权限：用于显示余额通知（必需）</string>
+    <string name="perm_battery">② 电池优化白名单：保证后台每 5 分钟刷新（建议）</string>
+    <string name="btn_grant_notif">授予通知权限</string>
+    <string name="btn_grant_battery">忽略电池优化</string>
+    <string name="status_granted">状态：已授予</string>
+    <string name="status_not_granted">状态：未授予</string>
+    <string name="status_unknown">状态：—</string>
+    <string name="btn_next_key">下一步：填写 API 密钥</string>
+    <string name="key_title">填写 DeepSeek API 密钥</string>
+    <string name="key_desc">密钥只保存在本机，仅用于调用官方余额接口 api.deepseek.com/user/balance。\n可在 platform.deepseek.com 的 API Keys 页面创建。</string>
+    <string name="key_hint">sk-…</string>
+    <string name="btn_save_key">保存并验证</string>
+    <string name="balance_label">当前余额</string>
+    <string name="updated_never">尚未刷新</string>
+    <string name="btn_refresh_now">立即刷新</string>
+    <string name="auto_refresh_label">每 5 分钟自动刷新</string>
+    <string name="btn_stop">停止通知</string>
+    <string name="btn_start">开启通知</string>
+    <string name="main_hint">通知栏常驻显示余额；通知上带「立即刷新」按钮。</string>
+    <string name="reset_key">重置密钥…</string>
+</resources>
